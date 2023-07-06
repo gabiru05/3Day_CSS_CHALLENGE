@@ -18,7 +18,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd 2Day_CSS_CHALLENGE
+  cd 3Day_CSS_CHALLENGE
 ```
 
 Start the site
