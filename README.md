@@ -4,6 +4,9 @@ Not as challenging as the real pyramids in Egypt, but the shadow path is not eas
 
 ## Screenshots
 
+![App Screenshot](https://github.com/gabiru05/3Day_CSS_CHALLENGE/blob/main/src/Pyramide1.png)
+![App Screenshot](https://github.com/gabiru05/3Day_CSS_CHALLENGE/blob/main/src/Pyramide2.png)
+
 ## Run Locally
 
 Clone the project

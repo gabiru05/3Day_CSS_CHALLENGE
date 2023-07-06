@@ -7,16 +7,44 @@
 body {
 	height: 100vh;
 	background-color: #272c34;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	font-family: "Caveat", cursive;
 }
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.tittle {
+	padding-bottom: 5%;
+	display: inline-block;
+
+	font: 700 normal 2.5em "tahoma";
+	text-shadow: 5px 2px #222324, 2px 4px #3d3d3d, 3px 5px #60656a;
+}
+
+.Type {
+	color: white;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 0;
+	animation: type 3.5s forwards infinite;
+}
+
+@keyframes type {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
 .container {
 	aspect-ratio: 1/1;
 	width: 40vw;
 	background-color: #75cfeb;
-	
+
 	position: relative;
 	overflow: hidden;
 	border-radius: 50%;
@@ -31,17 +59,13 @@ body {
 	0% {
 		opacity: 0;
 	}
-	5% {
-		opacity: 0;
-	}
-	30% {
+
+	10% {
 		opacity: 1;
 	}
-	70% {
+
+	90% {
 		opacity: 1;
-	}
-	95% {
-		opacity: 0;
 	}
 	100% {
 		opacity: 0;
@@ -65,26 +89,29 @@ body {
 
 	width: 150%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.25);
 
+	clip-path: polygon(25% 0%, 100% 20%, 73% 0);
+	-webkit-clip-path: polygon(25% 0%, 100% 20%, 73% 0);
 	animation: sombra 3.5s linear infinite;
 }
 
 @keyframes sombra {
 	0% {
-		clip-path: polygon(15% 0, 100% 20%, 85% 0);
+		clip-path: polygon(25% 0%, 100% 20%, 73% 0);
+		-webkit-clip-path: polygon(25% 0%, 100% 20%, 73% 0);
 	}
 	30% {
-		clip-path: polygon(15% 0, 100% 40%, 85% 0);
+		clip-path: polygon(25% 0%, 100% 40%, 73% 0);
+		-webkit-clip-path: polygon(25% 0%, 100% 40%, 73% 0);
 	}
 	50% {
-		clip-path: polygon(15% 0, 100% 40%, 85% 0);
-	}
-	65% {
-		clip-path: polygon(40px 0, 40px 100%, 140px 0);
+		clip-path: polygon(25% 0%, 100% 40%, 73% 0);
+		-webkit-clip-path: polygon(25% 0%, 100% 40%, 73% 0);
 	}
 	100% {
-		clip-path: polygon(15% 0, 0% 50%, 84% 0);
+		clip-path: polygon(27% 0%, 0% 50%, 74% 0);
+		-webkit-clip-path: polygon(27% 0%, 0% 50%, 74% 0);
 	}
 }
 .piramide {
@@ -181,28 +208,14 @@ body {
 	}
 }
 
-h2 {
-	color: transparent;
-	font-family: "Caveat", cursive;
-	font-size: 4em;
+footer {
+	/* position: absolute; */
+	padding-top: 3%;
+	width: 100%;
+}
 
-	background-clip: text;
-	-webkit-background-clip: text;
-	background-image: rgb(0, 118, 235);
-	background: -moz-linear-gradient(
-		100deg,
-		rgba(0, 118, 235, 1) 0%,
-		rgba(78, 0, 210, 1) 100%
-	);
-	background-image: -webkit-linear-gradient(
-		100deg,
-		rgba(0, 118, 235, 1) 0%,
-		rgba(78, 0, 210, 1) 100%
-	);
-	background-image: linear-gradient(
-		100deg,
-		rgba(0, 118, 235, 1) 0%,
-		rgba(78, 0, 210, 1) 100%
-	);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0076eb",endColorstr="#4e00d2",GradientType=1);
+footer h2 {
+	color: white;
+	float: right;
+	padding-right: 3%;
 }
